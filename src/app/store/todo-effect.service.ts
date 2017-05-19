@@ -20,7 +20,7 @@ export class TodoEffectService {
   loadTodoItems$: Observable<Action> = this.actions$
     .ofType(Dispatcher.INIT)
     .switchMap(action => {
-      return this.http.get('http://localhost:4200/api/todos.json');
+      return this.http.get('/api/todos.json');
     })
     .map(response => response.json())
     .map(data => new AssignTodosAction(data));

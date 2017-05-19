@@ -35,7 +35,3 @@ export class TodoContainerComponent implements OnInit {
   }
 
 }
-
-
-
-
